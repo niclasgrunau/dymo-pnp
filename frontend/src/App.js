@@ -861,7 +861,7 @@ function App() {
       // Send POST request to initiate downloads command, API endpoint for downloads command
       // download-command executes a shell script (exec) with the package CUPS that is processed locally and not on the remote server
       for (let i = 0; i < numPrints; i++) {
-        await axios.post("http://localhost:3001/image/download-command");
+        await axios.post("http://localhost:6983/download-command");
       }
       setPrintOrderReceived(true);
     } catch (error) {
