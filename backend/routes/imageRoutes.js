@@ -178,7 +178,7 @@ router.post("/createPDFWithText/:text", async (req, res) => {
     const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
     // Calculate the width of the input text in points
-    const textWidth = helveticaFont.widthOfTextAtSize(inputText, 80);
+    const textWidth = helveticaFont.widthOfTextAtSize(inputText, 65);
 
     // Create a new page with corrected dimensions
     const page = pdfDoc.addPage([textWidth, 69]);
@@ -186,8 +186,8 @@ router.post("/createPDFWithText/:text", async (req, res) => {
     // Add the text to the page
     page.drawText(inputText, {
       x: 0,
-      y: 5,
-      size: 80,
+      y: 15,
+      size: 65,
       font: helveticaFont,
       color: rgb(0, 0, 0),
     });
@@ -251,7 +251,7 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
     // Calculate the width of the input text in points
-    const textWidth = helveticaFont.widthOfTextAtSize(text, 80);
+    const textWidth = helveticaFont.widthOfTextAtSize(text, 65);
 
     // Calculate the width of the letter "E" in the chosen font size
     const letterEWidth = helveticaFont.widthOfTextAtSize("E", 55);
@@ -267,8 +267,8 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     // Add the text to the page
     page.drawText(text, {
       x: 0,
-      y: 5,
-      size: 80,
+      y: 15,
+      size: 65,
       font: helveticaFont,
       color: rgb(0, 0, 0),
     });
