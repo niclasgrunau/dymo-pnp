@@ -52,10 +52,12 @@ const LabelList = ({
     handleCloseModal();
   };
 
-  // Filter labels based on search term
-  const filteredLabels = userLabels.filter((label) =>
-    label.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Filter labels based on search term if userLabels is an array
+  const filteredLabels = Array.isArray(userLabels)
+    ? userLabels.filter((label) =>
+        label.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : [];
 
   // Reverse the order of filteredLabels
   const reversedLabels = [...filteredLabels].reverse();
