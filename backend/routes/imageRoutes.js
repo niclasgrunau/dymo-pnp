@@ -91,4 +91,230 @@ router.post("/download-command", (req, res) => {
   res.status(200).send(isPrint);
 });
 
+const PDFDocument = require("pdfkit");
+const qrcode = require("qrcode");
+const axios = require("axios");
+const apiKey = "dklXZ5YlmsgocRzvqUJDewFiniUeV68sfCohvJkQKTzrqQUrwByzXJVzJYxC";
+
+router.post("/createPDFWithQRCode/:text", async (req, res) => {
+  const text = req.params.text;
+
+  try {
+    // Shorten the URL using the TinyURL API
+    const tinyUrlResponse = await axios.post(
+      "https://api.tinyurl.com/create",
+      {
+        url: text,
+        domain: "tinyurl.com",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+      }
+    );
+
+    // Get the shortened URL from the response
+    const shortenedUrl = tinyUrlResponse.data.data.tiny_url;
+
+    // Generate QR code image data URL
+    const qrImageDataUrl = await qrcode.toDataURL(shortenedUrl, {
+      width: 30, // Set width and height of QR code to match label size
+    });
+
+    // Create a new PDF document
+    const doc = new PDFDocument({ size: [24, 24] });
+
+    // Pipe the PDF document to a writable stream
+    const fileName = "output2.pdf";
+    const filePath = path.join(__dirname, "..", "downloads", fileName);
+    const stream = fs.createWriteStream(filePath);
+    doc.pipe(stream);
+
+    // Calculate the position to center the QR code horizontally and vertically
+    const qrX = (doc.page.width - 30) / 2;
+    const qrY = (doc.page.height - 30) / 2;
+
+    // Add the QR code image to the PDF document
+    doc.image(qrImageDataUrl, qrX, qrY, { width: 30, height: 30 });
+
+    // Finalize the PDF document
+    doc.end();
+
+    console.log("PDF generated successfully:", filePath);
+
+    // Respond to the client with a success message
+    // Construct the CUPS command line for printing
+    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/${fileName}" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x24 -o fit-to-page`;
+
+    // Create a JSON object with the CUPS command line
+    const responseJson = { "CUPS command line for printing": cupsCommandLine };
+
+    // Manually stringify the JSON object without backslashes
+    const jsonString = `{ "CUPS command line for printing": "${cupsCommandLine}" }`;
+    res.status(200).send(jsonString);
+  } catch (error) {
+    console.error("Error generating PDF:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+const {
+  degrees,
+  PDFDocument: PDFLibDocument,
+  rgb,
+  StandardFonts,
+} = require("pdf-lib");
+
+router.post("/createPDFWithText/:text", async (req, res) => {
+  const inputText = req.params.text;
+
+  try {
+    // Create a new PDF document
+    const pdfDoc = await PDFLibDocument.create();
+
+    // Get the standard font Helvetica
+    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+    // Calculate the width of the input text in points
+    const textWidth = helveticaFont.widthOfTextAtSize(inputText, 80);
+
+    // Create a new page with corrected dimensions
+    const page = pdfDoc.addPage([textWidth, 69]);
+
+    // Add the text to the page
+    page.drawText(inputText, {
+      x: 0,
+      y: 5,
+      size: 80,
+      font: helveticaFont,
+      color: rgb(0, 0, 0),
+    });
+
+    // Save the PDF document to a file
+    const fileName = "output222.pdf";
+    const filePath = path.join(__dirname, "..", "downloads", fileName);
+    const pdfBytes = await pdfDoc.save();
+    fs.writeFileSync(filePath, pdfBytes);
+
+    console.log("PDF generated successfully:", filePath);
+
+    // Respond to the client with a success message
+    const printingWidth = (textWidth * 24) / 69;
+
+    const roundedPrintingWidth = Math.round(printingWidth);
+
+    // Construct the CUPS command line for printing
+    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/${fileName}" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x${roundedPrintingWidth} -o fit-to-page`;
+
+    // Create a JSON object with the CUPS command line
+    const responseJson = { "CUPS command line for printing": cupsCommandLine };
+
+    // Manually stringify the JSON object without backslashes
+    const jsonString = `{ "CUPS command line for printing": "${cupsCommandLine}" }`;
+
+    // Respond to the client with the CUPS command line
+    res.status(200).send(jsonString);
+  } catch (error) {
+    console.error("Error generating PDF:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
+  const { text, url } = req.query;
+
+  try {
+    // Shorten the URL using the TinyURL API
+    const tinyUrlResponse = await axios.post(
+      "https://api.tinyurl.com/create",
+      {
+        url: url,
+        domain: "tinyurl.com",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+      }
+    );
+
+    // Get the shortened URL from the response
+    const shortenedUrl = tinyUrlResponse.data.data.tiny_url;
+
+    // Create a new PDF document
+    const pdfDoc = await PDFLibDocument.create();
+
+    // Get the standard font Helvetica
+    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+    // Calculate the width of the input text in points
+    const textWidth = helveticaFont.widthOfTextAtSize(text, 80);
+
+    // Calculate the width of the letter "E" in the chosen font size
+    const letterEWidth = helveticaFont.widthOfTextAtSize("E", 55);
+
+    // Generate QR code image data URL
+    const qrImageDataUrl = await qrcode.toDataURL(shortenedUrl, {
+      width: 86, // Set width and height of QR code
+    });
+
+    // Create a new page with corrected dimensions
+    const page = pdfDoc.addPage([textWidth + 86 + letterEWidth, 69]); // Width = textWidth + QR code width + letterEWidth
+
+    // Add the text to the page
+    page.drawText(text, {
+      x: 0,
+      y: 5,
+      size: 80,
+      font: helveticaFont,
+      color: rgb(0, 0, 0),
+    });
+
+    // Calculate the position to add the QR code
+    const qrX = textWidth + letterEWidth; // Place QR code after the text and letter "E"
+    const qrY = (69 - 86) / 2; // Center vertically
+
+    // Add the QR code image to the PDF document
+    const qrImageBytes = Buffer.from(qrImageDataUrl.split(",")[1], "base64");
+    const qrImage = await pdfDoc.embedPng(qrImageBytes);
+    page.drawImage(qrImage, {
+      x: qrX,
+      y: qrY,
+      width: 86,
+      height: 86,
+    });
+
+    // Save the PDF document to a file
+    const fileName = "outputFINAL.pdf";
+    const filePath = path.join(__dirname, "..", "downloads", fileName);
+    const pdfBytes = await pdfDoc.save();
+    fs.writeFileSync(filePath, pdfBytes);
+
+    console.log("PDF generated successfully:", filePath);
+
+    // Respond to the client with a success message
+    const printingWidth = ((textWidth + 86 + letterEWidth) * 24) / 69;
+
+    const roundedPrintingWidth = Math.round(printingWidth);
+
+    // Construct the CUPS command line for printing
+    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/outputFINAL.pdf" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x${roundedPrintingWidth} -o fit-to-page`;
+
+    // Create a JSON object with the CUPS command line
+    const responseJson = { "CUPS command line for printing": cupsCommandLine };
+
+    // Manually stringify the JSON object without backslashes
+    const jsonString = `{ "CUPS command line for printing": "${cupsCommandLine}" }`;
+
+    // Respond to the client with the CUPS command line
+    res.status(200).send(jsonString);
+  } catch (error) {
+    console.error("Error generating PDF:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;
