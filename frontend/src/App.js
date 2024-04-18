@@ -783,8 +783,6 @@ function App() {
       //a.click();
       document.body.removeChild(a);
 
-      const canvasWidth = canvas.width;
-
       // Send POST request to save image, API endpoint for saving images
       await axios.post(
         "https://lehre.bpm.in.tum.de/ports/6982/image/saveImage",
@@ -803,10 +801,14 @@ function App() {
 
   // Function to resize the image
   const resizeImage = async () => {
+    const canvasWidth = canvas.width;
+
     try {
       // Send POST request to save image, API endpoint for resizing image locally
       // local-resize executes a shell script (exec) with the package ImageMagick that is processed locally and not on the remote server
-      const response = await axios.post("http://localhost:6983/local-resize");
+      const response = await axios.post("http://localhost:6983/local-resize", {
+        canvasWidth: canvasWidth,
+      });
       console.log(response.data.message);
     } catch (error) {
       console.error("Error:", error.message);
