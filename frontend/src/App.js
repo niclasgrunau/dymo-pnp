@@ -783,6 +783,8 @@ function App() {
       //a.click();
       document.body.removeChild(a);
 
+      const canvasWidth = canvas.width;
+
       // Send POST request to save image, API endpoint for saving images
       await axios.post(
         "https://lehre.bpm.in.tum.de/ports/6982/image/saveImage",
@@ -801,6 +803,14 @@ function App() {
 
   // Function to resize the image
   const resizeImage = async () => {
+    const canvas = canvasRef.current;
+    const dataUrl = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    //a.download = "DYMOPNP_label.png";
+    document.body.appendChild(a);
+    //a.click();
+    document.body.removeChild(a);
     const canvasWidth = canvas.width;
 
     try {
