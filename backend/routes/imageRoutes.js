@@ -127,7 +127,7 @@ router.post("/createPDFWithQRCode/:text", async (req, res) => {
     const doc = new PDFDocument({ size: [24, 24] });
 
     // Pipe the PDF document to a writable stream
-    const fileName = "output2.pdf";
+    const fileName = "PDFQRCode.pdf";
     const filePath = path.join(__dirname, "..", "downloads", fileName);
     const stream = fs.createWriteStream(filePath);
     doc.pipe(stream);
@@ -193,7 +193,7 @@ router.post("/createPDFWithText/:text", async (req, res) => {
     });
 
     // Save the PDF document to a file
-    const fileName = "output222.pdf";
+    const fileName = "PDFText.pdf";
     const filePath = path.join(__dirname, "..", "downloads", fileName);
     const pdfBytes = await pdfDoc.save();
     fs.writeFileSync(filePath, pdfBytes);
@@ -288,7 +288,7 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     });
 
     // Save the PDF document to a file
-    const fileName = "outputFINAL.pdf";
+    const fileName = "PDFTextAndQRCode.pdf";
     const filePath = path.join(__dirname, "..", "downloads", fileName);
     const pdfBytes = await pdfDoc.save();
     fs.writeFileSync(filePath, pdfBytes);
@@ -301,7 +301,7 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     const roundedPrintingWidth = Math.round(printingWidth);
 
     // Construct the CUPS command line for printing
-    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/outputFINAL.pdf" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x${roundedPrintingWidth} -o fit-to-page`;
+    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/PDFTextAndQRCode.pdf" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x${roundedPrintingWidth} -o fit-to-page`;
 
     // Create a JSON object with the CUPS command line
     const responseJson = { "CUPS command line for printing": cupsCommandLine };
