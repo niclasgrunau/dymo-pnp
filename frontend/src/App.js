@@ -647,7 +647,7 @@ function App() {
       if (loggedInUser) {
         // Send GET request to fetch user labels, API endpoint for fetching user labels
         const response = await axios.get(
-          `https://lehre.bpm.in.tum.de/ports/6982/labels/user/${loggedInUser._id}`
+          `https://lehre.bpm.in.tum.de/ports/6982/labels/allLabelsOfUser/${loggedInUser._id}`
         );
         // Set user labels state
         await setUserLabels(response.data);
