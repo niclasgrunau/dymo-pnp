@@ -168,9 +168,16 @@ const {
 } = require("pdf-lib");
 
 router.post("/createPDFWithText/:text", async (req, res) => {
-  const inputText = req.params.text;
-
   try {
+    // Get the input text from the URL parameter
+    const inputText = req.params.text;
+
+    // Split the input text by hyphens ("-") to get individual words
+    const words = inputText.split("-");
+
+    // Combine the words into a single string separated by spaces
+    const fullText = words.join(" ");
+
     // Create a new PDF document
     const pdfDoc = await PDFLibDocument.create();
 
@@ -178,13 +185,13 @@ router.post("/createPDFWithText/:text", async (req, res) => {
     const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
     // Calculate the width of the input text in points
-    const textWidth = helveticaFont.widthOfTextAtSize(inputText, 65);
+    const textWidth = helveticaFont.widthOfTextAtSize(fullText, 65);
 
     // Create a new page with corrected dimensions
     const page = pdfDoc.addPage([textWidth, 69]);
 
     // Add the text to the page
-    page.drawText(inputText, {
+    page.drawText(fullText, {
       x: 0,
       y: 15,
       size: 65,
@@ -202,11 +209,10 @@ router.post("/createPDFWithText/:text", async (req, res) => {
 
     // Respond to the client with a success message
     const printingWidth = (textWidth * 24) / 69;
-
     const roundedPrintingWidth = Math.round(printingWidth);
 
     // Construct the CUPS command line for printing
-    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/${fileName}" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x${roundedPrintingWidth} -o fit-to-page`;
+    const cupsCommandLine = `curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloa`;
 
     // Create a JSON object with the CUPS command line
     const responseJson = { "CUPS command line for printing": cupsCommandLine };
@@ -244,6 +250,11 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     // Get the shortened URL from the response
     const shortenedUrl = tinyUrlResponse.data.data.tiny_url;
 
+    const words = text.split("-");
+
+    // Combine the words into a single string separated by spaces
+    const fullText = words.join(" ");
+
     // Create a new PDF document
     const pdfDoc = await PDFLibDocument.create();
 
@@ -251,7 +262,7 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
     // Calculate the width of the input text in points
-    const textWidth = helveticaFont.widthOfTextAtSize(text, 65);
+    const textWidth = helveticaFont.widthOfTextAtSize(fullText, 65);
 
     // Calculate the width of the letter "E" in the chosen font size
     const letterEWidth = helveticaFont.widthOfTextAtSize("E", 55);
@@ -265,7 +276,7 @@ router.get("/createPDFWithTextAndQRCode-query", async (req, res) => {
     const page = pdfDoc.addPage([textWidth + 86 + letterEWidth, 69]); // Width = textWidth + QR code width + letterEWidth
 
     // Add the text to the page
-    page.drawText(text, {
+    page.drawText(fullText, {
       x: 0,
       y: 15,
       size: 65,
