@@ -257,7 +257,7 @@
         </parameters>
         <code>
           <prepare/>
-          <finalize output="result">data.att12 = result</finalize>
+          <finalize output="result">data.updatedUser = result</finalize>
           <update output="result"/>
           <rescue output="result"/>
         </code>
