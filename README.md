@@ -109,6 +109,20 @@ Now, the web application will run [on the server port](https://lehre.bpm.in.tum.
 ![Screenshot 2](https://github.com/niclasgrunau/dymo-pnp-localhost/blob/main/docs/frontend_img2.png)
 
 ---
+
+### Sequence diagram
+
+#### Use of the application via frontend and Lehre server
+
+![Sequence diagram 1](https://github.com/niclasgrunau/dymo-pnp/blob/main/sequence-diagrams/projectmodell_frontend_lehre.png)
+
+
+#### Use of the application via CPEE
+
+![Sequence diagram 2](https://github.com/niclasgrunau/dymo-pnp/blob/main/sequence-diagrams/projectmodell_cpee.png)
+
+
+---
 ### CPEE
 
 CPEE (Cloud Process Execution Engine) is a process execution engine. Different process sequences that occur in the application are shown below in CPEE.
