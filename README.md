@@ -585,6 +585,7 @@ If the URL entered by the user is too long, the QR code becomes too detailed to 
 
 | Attribute  | Type     | Required | Unique |
 | ---------- | -------- | -------- | ------ |
+| _id        | ObjectId | Yes      | No     |
 | name       | String   | Yes      | No     |
 | email      | String   | Yes      | Yes    |
 | password   | String   | Yes      | No     |
@@ -594,6 +595,7 @@ If the URL entered by the user is too long, the QR code becomes too detailed to 
 
 | Attribute          | Type     | Required | Unique |
 | ------------------ | -------- | -------- | ------ |
+| _id                | ObjectId | Yes      | No     |
 | user               | ObjectId | Yes      | No     |
 | name               | String   | Yes      | No     |
 | text               | String   | No       | No     |
