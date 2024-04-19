@@ -111,54 +111,86 @@ Now, the web application will run [on the server port](https://lehre.bpm.in.tum.
 ---
 ### CPEE
 
-CPEE (Cloud Process Execution Engine) is an execution engine. Different process sequences that occur in the application are shown below in CPEE.
+CPEE (Cloud Process Execution Engine) is a process execution engine. Different process sequences that occur in the application are shown below in CPEE.
 
-#### Screenshot 1: Print Label ([see in CPEE](https://cpee.org/flow/index.html?monitor=https://cpee.org/flow/engine/36715/))
-![Screenshot 1](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-1-print.png)
+#### The following 3 process instances require interaction with the application [on the server](https://lehre.bpm.in.tum.de/ports/6982/).
+
+#### Screenshot 1: User endpoints ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-1.xml))
+![Screenshot 1](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-1.png)
 
 **Description:**
-- User in on web app
-- User customizes label
+- Get attributes of specific user (returns the attributes of a specific user as a list)
+- Get attributes of all users (returns the attributes of a all users as a list within dictionaries representing users)
+- Get emails of all users (returns the emails of a all users as a list)
+- User registration (return status 200 message indicating that the user has been registered successfully)
+- User login (return status 200 message indicating that the user logged in and a list of the attributes of the logged in user)
+- Delete specific user (return status 200 message indicating that the user has been deleted successfully)
+
+
+ #### Screenshot 2: Label endpoints ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-2.xml))
+![Screenshot 2](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-2.png)
+
+**Description:**
+- All labels of specific user (returns the attributes of a all labels of a user as a list within dictionaries representing labels)
+- Save label for a user (return status 200 message indicating that the labels has been saved successfully)
+- Delete label of a user (return status 200 message indicating that the label has been deleted successfully)
+- Get attributes of label (returns the attributes of a specific label as a list)
+- Get all labels with an url (returns the label, user and timestamp of a all labels with a specific URL as a list within dictionaries representing labels)
+- Update user of a label (return status 200 message indicating that the user of a label has been updated successfully and the id of the new user)
+
+
+ #### Screenshot 3: Label endpoints ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-3.xml))
+![Screenshot 2](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-3.png)
+
+**Description:**
+- Create a PDF label with a specified text (returns a CUPS command line for printing the created PDF with a specific text)
+- Create a PDF label with a specified QR Code (returns a CUPS command line for printing the created PDF with a specific QR Code)
+- Create a PDF label with a specified text and QR Code (returns a CUPS command line for printing the created PDF with a specific text and QR Code)
+
+
+#### The following 4 process instances require interaction with the application [on the server](https://lehre.bpm.in.tum.de/ports/6982/).
+
+#### Screenshot 4: Print Label ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-41.xml))
+![Screenshot 4](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-41.png)
+
+**Description:**
 - While print button not clicked:
   - Check if print button was clicked
 - Save image
 - Resize image
 - Print image
-- DYMO PNP LM prints label
-- Person takes label from printer
 
 
-#### Screenshot 2: Login + Save Label ([see in CPEE](https://cpee.org/flow/index.html?monitor=https://cpee.org/flow/engine/36714/))
-![Screenshot 2](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-2-saveLabel.png)
+#### Screenshot 5: Login + Save Label ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-42.xml))
+![Screenshot 5](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-42.png)
 
 **Description:**
-- User in on web app
 - While user not logged in:
   - Check if login button was clicked and 200 status was sent
-- User customizes label
 - While save label button not clicked:
   - Check if save label button was clicked and 200 status was sent
+- Saved label
 
 
-#### Screenshot 3: Login + Delete Label ([see in CPEE](https://cpee.org/flow/index.html?monitor=https://cpee.org/flow/engine/36716/))
-![Screenshot 3](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-3-deleteLabel.png)
+#### Screenshot 6: Login + Delete Label ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-43.xml))
+![Screenshot 6](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-43.png)
 
 **Description:**
-- User in on web app
 - While user not logged in:
   - Check if login button was clicked and 200 status was sent
 - While delete label button not clicked:
   - Check if delete label button was clicked and 200 status was sent
+- Deleted label
 
 
-#### Screenshot 4: Registering ([see in CPEE](https://cpee.org/flow/index.html?monitor=https://cpee.org/flow/engine/36717/))
-![Screenshot 4](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-4-register.png)
+
+#### Screenshot 7: Registering ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-44.xml))
+![Screenshot 7](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-44.png)
 
 **Description:**
-- User in on web app
 - While user not logged in:
   - Check if register button was clicked and 200 status was sent
- 
+
 
 ---
 
