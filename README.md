@@ -183,7 +183,6 @@ CPEE (Cloud Process Execution Engine) is a process execution engine. Different p
 - Deleted label
 
 
-
 #### Screenshot 7: Registering ([see instance](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-44.xml))
 ![Screenshot 7](https://github.com/niclasgrunau/dymo-pnp/blob/main/cpee-instances/dymo-pnp-44.png)
 
@@ -194,8 +193,8 @@ CPEE (Cloud Process Execution Engine) is a process execution engine. Different p
 
 ---
 
-### API Endpoints
-### User Routes
+### API Endpoints for process execution via frontend
+## User Routes
 
 #### `GET /users/getUsers`
 
@@ -243,7 +242,7 @@ This endpoint authenticates a user with the provided email and password.
 - 401 Unauthorized: Invalid credentials.
 - 500 Error: Internal Server Error.
 
-### Label Routes
+## Label Routes
 
 #### `POST /labels/save`
 
@@ -271,7 +270,7 @@ This endpoint saves a new label to the database.
 - 201 Created: Label saved successfully.
 - 500 Internal Server Error: Error saving label.
 
-#### `GET /labels/user/:userId`
+#### `GET /labels/allLabelsOfUser/:userId`
 
 This endpoint retrieves all labels associated with a specific user.
 
@@ -330,6 +329,242 @@ This endpoint downloads the resized image and sends a print command to a printer
 
 - 200 OK: Download command executed successfully.
 - 500 Internal Server Error: Error executing the download command.
+
+---
+
+### API Endpoints for process execution via CPEE (REST)
+### User Routes
+
+#### `POST /users/register-query`
+
+Registers a new user with the provided name, email, and password.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `name`    | string | The name of the user.             |
+| `email`   | string | The email of the user.            |
+| `password`| string | The password of the user.         |
+
+#### Response
+
+- 200 OK: User registered successfully.
+- 400 Bad Request: Email already registered.
+- 500 Error: Internal Server Error.
+
+
+#### `POST /users/login-query`
+
+Authenticates a user with the provided email and password.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `email`   | string | The email of the user.            |
+| `password`| string | The password of the user.         |
+
+#### Response
+
+- 200 OK: Login successful.
+- 401 Unauthorized: Invalid credentials.
+- 500 Error: Internal Server Error.
+
+#### `GET /users/getInfoOfUser/:userId`
+
+Retrieves information about a specific user by their user ID.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `userId`  | string | The ID of the user.                |
+
+#### Response
+
+- 200 OK: Returns the attributes of a specific user as a list.
+- 404 Not Found: User not found.
+- 500 Error: Internal Server Error.
+
+#### `GET /users/getInfoOfAllUsers`
+
+Retrieves information about all users.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| None      |        |                                    |
+
+#### Response
+
+- 200 OK: Returns the attributes of a all users as a list within dictionaries representing users.
+- 500 Error: Internal Server Error.
+
+#### `GET /users/getAllUserEmails`
+
+Retrieves the emails of all users.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| None      |        |                                    |
+
+#### Response
+
+- 200 OK: Returns the emails of a all users as a list.
+- 500 Error: Internal Server Error.
+
+#### `DELETE /users/deleteUser/:userId`
+
+Deletes a user with the specified user ID.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `userId`  | string | The ID of the user to be deleted.  |
+
+#### Response
+
+- 200 OK: User deleted successfully.
+- 400 Bad Request: No userId provided.
+- 500 Error: Internal Server Error.
+
+## Label Routes
+
+#### `POST /labels/save-query`
+
+Saves a new label to the database with the provided details.
+
+| Parameter          | Type    | Description                              |
+| ------------------ | ------- | ---------------------------------------- |
+| `userId`           | string  | The ID of the user associated with the label. |
+| `name`             | string  | The name of the label.                   |
+| `text`             | string  | The text content of the label.           |
+| `fontStyle`        | string  | The font style of the label.             |
+| `fontSize`         | number  | The font size of the label.              |
+| `isBold`           | boolean | Indicates if the label text is bold.     |
+| `isItalic`         | boolean | Indicates if the label text is italicized. |
+| `isUnderline`      | boolean | Indicates if the label text is underlined. |
+| `textAlignment`    | string  | The text alignment of the label.         |
+| `verticalAlignment`| string  | The vertical alignment of the label.     |
+| `isQRCodeUsed`     | boolean | Indicates if a QR code is used in the label. |
+| `url`              | string  | The URL associated with the label.       |
+| `shortenedUrl`     | string  | The shortened URL associated with the label. |
+| `createdAt`        | Date    | The creation date of the label.          |
+
+#### Response
+
+- 200 OK: Label saved successfully.
+- 500 Internal Server Error: Error saving label.
+
+#### `DELETE /labels/deleteLabel/:labelId`
+
+Deletes a label with the specified ID.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `labelId` | string | The ID of the label to be deleted. |
+
+#### Response
+
+- 200 OK: Label deleted successfully.
+- 400 Bad Request: No labelId provided.
+- 500 Internal Server Error: Error deleting label.
+
+#### `GET /labels/getInfoOfLabel/:labelId`
+
+Retrieves information about a specific label by its ID.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `labelId` | string | The ID of the label.               |
+
+#### Response
+
+- 200 OK: Returns the attributes of a specific label as a list.
+- 404 Not Found: Label not found.
+- 500 Internal Server Error: Internal Server Error.
+
+#### `GET /labels/labelWithUrl/:url`
+
+Retrieves labels with the specified URL.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `url`     | string | The URL associated with the label. |
+
+#### Response
+
+- 200 OK: Returns the label, user and timestamp of a all labels with a specific URL as a list within dictionaries representing labels.
+- 404 Not Found: No labels found with the specified URL.
+- 500 Internal Server Error: Internal Server Error.
+
+#### `GET /labels/allLabelsWithUrl`
+
+Retrieves information about all labels.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| None      |        |                                    |
+
+#### Response
+
+- 200 OK: Returns the label, user and timestamp of a all labels with an URL as a list within dictionaries representing labels.
+- 404 Not Found: No labels found.
+- 500 Internal Server Error: Internal Server Error.
+
+#### `PUT /labels/updateUserOfLabel/:labelId/:newUserId`
+
+Updates the user associated with a label.
+
+| Parameter   | Type   | Description                           |
+| ----------- | ------ | ------------------------------------- |
+| `labelId`   | string | The ID of the label to be updated.    |
+| `newUserId` | string | The ID of the new user for the label. |
+
+#### Response
+
+- 200 OK: Label user updated successfully and returns the id of the new user.
+- 400 Bad Request: LabelId or newUserId not provided.
+- 404 Not Found: Label not found or User not found.
+- 500 Internal Server Error: Internal Server Error.
+
+## Image (PDF) Routes
+
+#### `POST /pdf/createPDFWithQRCode/:text`
+
+Creates a PDF document containing a QR code generated from the provided text.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `text`    | string | The text to generate QR code from. |
+
+#### Response
+
+- 200 OK: Created a PDF label with a specified QR Code and returns a CUPS command line for printing the created PDF with a specific QR Code.
+- 500 Internal Server Error: Error generating PDF.
+
+#### `POST /pdf/createPDFWithText/:text`
+
+Creates a PDF document containing the provided text.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `text`    | string | The text to include in the PDF.    |
+
+#### Response
+
+- 200 OK: Createde a PDF label with a specified text and returns a CUPS command line for printing the created PDF with a specific text.
+- 500 Internal Server Error: Error generating PDF.
+
+#### `GET /pdf/createPDFWithTextAndQRCode-query`
+
+Creates a PDF document containing both text and a QR code.
+
+| Parameter | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `text`    | string | The text to include in the PDF.    |
+| `url`     | string | The URL to generate QR code from. |
+
+#### Response
+
+- 200 OK: Created a PDF label with a specified text and QR Code and returns a CUPS command line for printing the created PDF with a specific text and QR Code.
+- 500 Internal Server Error: Error generating PDF.
+
+
+---
 
 ### Other Routes
 
