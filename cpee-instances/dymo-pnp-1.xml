@@ -1,0 +1,304 @@
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <allUser>[{"_id":"65a11a44044477f879936096","name":"Peter","email":"peter@web.de","password":"$2b$10$rGGM9iKQIRktwYpzOPg32.fjTkJrNlmOR7szXIi0Hxz6ckzfXmXwK","labels":["65a65ed22c83d59851bf4c35","65ad315059baf730b299befe","65ad315459baf730b299bf03","65ad315659baf730b299bf08","65ad32f759baf730b299bf11","65ae75f6507a59da35955295","65c880137e80b942d70cb655","65c8e58058c0f4df3d8c73a1","65c8e5e258c0f4df3d8c73b4","65c8e70158c0f4df3d8c73c0","65c8e79d58c0f4df3d8c73d0","65c8e8e958c0f4df3d8c73d8","65cf6e42872689433a6ab4fd"],"__v":0},{"_id":"65a5ba47b76884bbdca0ab33","name":"hans","email":"peterssss@web.de","password":"$2b$10$Ak81zyaqBTXWRmOUeaR6Qe6VSxY6hy4QkRPe5d86X.VeKi3YHXUJy","labels":[],"__v":0},{"_id":"65a64c892c83d59851bf4b8e","name":"Niclas","email":"n@web.de","password":"$2b$10$kmP.iSjyAKggZAx/hl5YEOjIM2D/onO/OFbwxIkbg.AvuQlFHsnkS","labels":[],"__v":0},{"_id":"65a64d3e2c83d59851bf4b91","name":"Niclas","email":"na@web.de","password":"$2b$10$BD.UImjJAAHWzfdFL5Zucu2bFO4.tHqtgpAiWjlHCIFxTQZ8Nc3q.","labels":[],"__v":0},{"_id":"65a64e542c83d59851bf4b97","name":"a","email":"qw@web.de","password":"$2b$10$WyOVU3LjteYyEChseXYx/e4rPN413m.EGd0RWbRW06BJsOHVnj.om","labels":[],"__v":0},{"_id":"65ad1e3cec904dad4c4f91ad","name":"hans","email":"peter@web.dee","password":"$2b$10$i67X1Rkp4VxEvZF/L5o9nuOk2ti.Lt8yQuX3BTZdoqcOw0wq6dwrO","labels":[],"__v":0},{"_id":"65ad1fb3ec904dad4c4f91b7","name":"a","email":"peter@web.deee","password":"$2b$10$XwPfWqoJO.ljLjTCwIxbc.RvijqrZ9Pw.NUuhYA1yZSi6ZNUyPwLm","labels":[],"__v":0},{"_id":"65c27dc9bafb031c43a3c03e","name":"w","email":"r@web.de","password":"$2b$10$VFsJA6SP6QhKi1H.q4x/AeXLe/PT9In2PwbuHMRIWHpv6xxXH6hc6","labels":[],"__v":0},{"_id":"65c27e46a6f397e12713253f","name":"q","email":"t@web.de","password":"$2b$10$eBJhofORhASncemEuZKvIOgExp6L8dXApo.ByqPvtDtTwsOKQtbOO","labels":[],"__v":0},{"_id":"65c28278a82f46a0e2144016","name":"q","email":"q","password":"$2b$10$sfzvNbDrXicOE1z.n/mRte/.2A89oyVilAtZyk19ks7uHTvuBFbiK","labels":[],"__v":0},{"_id":"65c28296a82f46a0e214401a","name":"wwwww","email":"hallo@web.de","password":"$2b$10$f3MbYBYMv6LagazOtAndyuaJM/EgFVmqs3WPctrN1w4xEE8GbYTFi","labels":[],"__v":0},{"_id":"65c892dd8a84a26fa3791855","name":"q","email":"versuch3@web.de","password":"$2b$10$pXotsPaH0U68gi.j4NzFmuebwPDdBMK57yRUdfQxX.qmbLd6Xa.jm","labels":[],"__v":0},{"_id":"65c8bd42143d34895803b616","name":"hallo4","email":"versuch4@web.de","password":"$2b$10$hvjGNSyKGpXpJy8FSItUp.ne8nzUWnTeMNR9JKVW7n6iJflaKa8rq","labels":["65c8bd50143d34895803b619"],"__v":0},{"_id":"65c8e41679f9ca55c7891c28","name":"a","email":"wq@web.de","password":"$2b$10$ctB60/.3riSiklQFEn8UVuXMdvgYaG0HGGKiHr43CAYmFPxtUSAmu","labels":["65c8e57258c0f4df3d8c739b","65c8e5c858c0f4df3d8c73ae","65c8e5f558c0f4df3d8c73ba","65c8e71358c0f4df3d8c73c6"],"__v":0},{"_id":"65cf6e50872689433a6ab501","name":"a","email":"aa@web.de","password":"$2b$10$q23WGA/2djFc3zCe/zHOWuS/Ipt3.6f0CP5NMyvhc4av2vB3InXEO","labels":["65cf6e5b872689433a6ab504"],"__v":0},{"_id":"65cf71f16f33c907c7315f63","name":"hund","email":"hund@web.de","password":"$2b$10$L3fWtwV15yAJ.ZpZLoUddOXCHW5NVQvOiBOFA.h8LFR7bPY.49f6S","labels":[],"__v":0},{"_id":"65cf95c3f55863ab6ba51ca9","name":"aaasadsad","email":"aaaqwa@web.de","password":"$2b$10$3Xr48AH/62AY36UK26OO9eXL.B8gRJjBSMaM26tm5OeG8ClKpqTea","labels":[],"__v":0},{"_id":"65cf95df78a11cabeab418ee","name":"v","email":"versuch10@web.de","password":"$2b$10$/pY84S89G0pVu5ZB8ji/8u8pLcQXbfl0E9VYXA7fDlWdDBcWTTvPC","labels":[],"__v":0},{"_id":"65cf96c298ae436ff00b21bd","name":"why","email":"versuch1why@web.de","password":"$2b$10$m0Et1BWjnIxnhZeeymPSiuFS2378jNUNB660cV.drkLMKIY2rH1qK","labels":[],"__v":0},{"_id":"65cf96f898ae436ff00b21c0","name":"wahrscheinlich","email":"wahr@web.de","password":"$2b$10$P9jhCzISsRLO2IYhEFUkouuBgLHFHFDcj4vXKuJ6EPhIJaxe3m2cu","labels":[],"__v":0},{"_id":"65cf976e17a7b38a16896d50","name":"holo","email":"holo@web.de","password":"$2b$10$m80PDg9csO37GdnR43v95eV4udLMC1hPFr.O0VPxlM2oSDMSDMrJy","labels":[],"__v":0},{"_id":"65cf97e0bc7d6fb6a5aab095","name":"hume","email":"hume@web.de","password":"$2b$10$RZ19GImO7FDe6iu5MEA5A.Wfm6Upzz0jxjERJxXw1.86v2Sqd.1AS","labels":[],"__v":0},{"_id":"65d1cfedb65e44a5fbb2f798","name":"Ryan Stecken","email":"ryan@web.de","password":"$2b$10$9OVhviQrElwN9Xvi.IqGBuMuYTxFR19IJpXZ4sZZ2xpVv4bfrEYri","labels":["65d1d00fb65e44a5fbb2f79d"],"__v":0},{"_id":"6612ae82bc5842cf7eb974fe","name":"Diet","email":"dd@web.de","password":"$2b$10$NIWSPtFYn1o4dF/WwrQkDOOsnv59sU0rvf4hbuYd.mEGouUsXWpiK","labels":["6612aebabc5842cf7eb97503"],"__v":0},{"_id":"6613cefaee7103b167bead7f","name":"ttt","email":"ttt@web.de","password":"$2b$10$s/VGqr19DLqN40VO8lFS4O2e4nffnsFvmnP6r8SKWh2XyMICNwaSK","labels":[],"__v":0},{"_id":"6613cf22ee7103b167bead84","name":"w","email":"der@web.de","password":"$2b$10$GEnD3LyY6zMUWVnwEYfR6eiTcDDItkazceKaqy3swZHuzgC/GKND.","labels":[],"__v":0},{"_id":"6613d2dcee7103b167bead8a","name":"test5","email":"test55@web.de","password":"$2b$10$sR29Y5b1cZFbn5ixRIVysulSuH4xQhCTx2RxhbZ1un8AD1OckF82e","labels":[],"__v":0},{"_id":"661cfd990487d75c4819d575","name":"Michael","email":"michael3@web.de","password":"$2b$10$0KdPFNmJ0GJfKKQI/bo4vuEwDL3U8PBKG4RUizW14AO/W/GjstuQi","labels":[],"__v":0},{"_id":"661d02000487d75c4819d57d","name":"Michael","email":"michael4@web.de","password":"$2b$10$GPWaXX4kJBu77nRMd5Zzk.khtX5sy8.BcruJTE3K4gHoW9sADyfam","labels":[],"__v":0},{"_id":"661d028faf703b2e1c88ab73","name":"Michael","email":"michael5@web.de","password":"$2b$10$.1oNsRT5nmb7hgxbGJpM7OAH2j3klDqZyd77O7MuyLVIFXG7L0Gwe","labels":[],"__v":0},{"_id":"661d0447cf75b01f14e089eb","name":"Michael","email":"michael6@web.de","password":"$2b$10$ICqlDLtE7rF1V1jxnGd4uuqHIIun9/ZLPtdeCR4VsYYpkhF3lcSVa","labels":[],"__v":0},{"_id":"661d05b11b6e4aa4d4f405ae","name":"Michael","email":"michael7@web.de","password":"$2b$10$jMVFLaGwaxvxqxO3dtkYROx7wA8IbGf62wyNg68gWRMHzSgB75ccG","labels":[],"__v":0},{"_id":"661d07528cf6ec03f5af6dd9","name":"Michael","email":"michael8@web.de","password":"$2b$10$NrfQR4zEDZ67FOvOHJ2c.er3Aope.kJkBJuwdbF9g/DvVRu.XUWfS","labels":[],"__v":0},{"_id":"661d07728cf6ec03f5af6de2","name":"Michael","email":"michael10@web.de","password":"$2b$10$97ORg1sVeE9aUefU38THZOEccELcZwgQ70E3Qr8vFQjRx5EZyic/e","labels":[],"__v":0},{"_id":"661d09c5d2d167feaf5800bc","name":"Michael","email":"michael11@web.de","password":"$2b$10$sQwNekeQnMGrI51tbvmYt.qOFeNLdn5UX3jQo64m5PNjjjPrPXpga","labels":[],"__v":0},{"_id":"661d1cfbd2d167feaf5800c7","name":"Michael","email":"michael13@web.de","password":"$2b$10$O6AmV6/SIruW0e6obhv2J.hyqLnwaQMrd0CxpXO0vCuI3vIGP5ZTK","labels":[],"__v":0},{"_id":"661d1d1ed2d167feaf5800d5","name":"Michael","email":"michael14@web.de","password":"$2b$10$aKDcYUdIS7DDu.g.4.vLGuICEoKF3CrJxY4B9upjivHEG2vlscpdu","labels":[],"__v":0},{"_id":"661e646446395fabea74f330","name":"Michael","email":"michael15@web.de","password":"$2b$10$QP6P2GSAXdqnU/fy91PX6u3hfOIaf4fDnQHdH1gNlWcYT1mP0kXYG","labels":[],"__v":0},{"_id":"661e651eed80cfb833d0d47e","name":"Michael","email":"michael16@web.de","password":"$2b$10$PFasrbdgE729i6.GkxlhDuBv9.4G3QJ8vYYqQWWKEfCB3vWXW67mi","labels":[],"__v":0},{"_id":"661e65bb2cd1c0f2d31aab58","name":"Michael","email":"michael17@web.de","password":"$2b$10$x.CD9tT8GqrojTXnObVIreOoHQq2hfLSp17G7PknFV9qeAxAhxrtO","labels":[],"__v":0},{"_id":"661e66f88d7193a4201e24ae","name":"Michael","email":"michael18@web.de","password":"$2b$10$CtUk831nT8u7aJT7eCnZEuCtlcAfuOV4xPm4SwtwEh4tPdavCXSXi","labels":[],"__v":0},{"_id":"661e68117deb6187b800fdfe","name":"Michael","email":"michael19@web.de","password":"$2b$10$b4BzvK6pWEFFMwSdwhqWGuj421LZat1Trfu7djxfIYmRftUSECcF6","labels":[],"__v":0},{"_id":"662123922f7c8e969c20bc1e","name":"poi","email":"poi@web.de","password":"$2b$10$AMduWbDgnl9Inn/PeNieQON8Tx8ReixJXHmIyyBH1jxxATXCZbrPq","labels":[],"__v":0},{"_id":"662125bd2f7c8e969c20bc25","name":"cd","email":"cd@web.de","password":"$2b$10$BZs7NMswvqe2BGwWpD6i7ODFQU1fq502EQNnKbdcc3/PWfWj1uhW.","labels":[],"__v":0},{"_id":"662138bcba286fb581390d90","name":"Michael","email":"michael20@web.de","password":"$2b$10$as5DoF/0p45TXl34i2n7H.gF.R9kaHYBn2R3gJgp8/iAr/8NGcTAm","labels":[],"__v":0},{"_id":"66214cf620618da6843f8e7a","name":"Michael","email":"michael21@web.de","password":"$2b$10$izfnDSyoRotAK9cvXTxdf.b3A.yGW/kZXyqZSgD2YimPzoK5OIjHy","labels":[],"__v":0}]</allUser>
+    <allUserEmails>["peter@web.de","peterssss@web.de","n@web.de","na@web.de","qw@web.de","peter@web.dee","peter@web.deee","r@web.de","t@web.de","q","hallo@web.de","versuch3@web.de","versuch4@web.de","wq@web.de","aa@web.de","hund@web.de","aaaqwa@web.de","versuch10@web.de","versuch1why@web.de","wahr@web.de","holo@web.de","hume@web.de","ryan@web.de","dd@web.de","ttt@web.de","der@web.de","test55@web.de","michael3@web.de","michael4@web.de","michael5@web.de","michael6@web.de","michael7@web.de","michael8@web.de","michael10@web.de","michael11@web.de","michael13@web.de","michael14@web.de","michael15@web.de","michael16@web.de","michael17@web.de","michael18@web.de","michael19@web.de","poi@web.de","cd@web.de","michael20@web.de","michael21@web.de"]</allUserEmails>
+    <deletedUser>{"message":"User deleted successfully"}</deletedUser>
+    <newLogin>{"message":"Login successful","user":{"_id":"661d05b11b6e4aa4d4f405ae","name":"Michael","email":"michael7@web.de","password":"$2b$10$jMVFLaGwaxvxqxO3dtkYROx7wA8IbGf62wyNg68gWRMHzSgB75ccG","labels":[],"__v":0}}</newLogin>
+    <newUser>{"message":"User registered successfully"}</newUser>
+    <user>[{"_id":"65a11a44044477f879936096","name":"Peter","email":"peter@web.de","password":"$2b$10$rGGM9iKQIRktwYpzOPg32.fjTkJrNlmOR7szXIi0Hxz6ckzfXmXwK","labels":["65a65ed22c83d59851bf4c35","65ad315059baf730b299befe","65ad315459baf730b299bf03","65ad315659baf730b299bf08","65ad32f759baf730b299bf11","65ae75f6507a59da35955295","65c880137e80b942d70cb655","65c8e58058c0f4df3d8c73a1","65c8e5e258c0f4df3d8c73b4","65c8e70158c0f4df3d8c73c0","65c8e79d58c0f4df3d8c73d0","65c8e8e958c0f4df3d8c73d8","65cf6e42872689433a6ab4fd"],"__v":0},{"_id":"65a5ba47b76884bbdca0ab33","name":"hans","email":"peterssss@web.de","password":"$2b$10$Ak81zyaqBTXWRmOUeaR6Qe6VSxY6hy4QkRPe5d86X.VeKi3YHXUJy","labels":[],"__v":0},{"_id":"65a64c892c83d59851bf4b8e","name":"Niclas","email":"n@web.de","password":"$2b$10$kmP.iSjyAKggZAx/hl5YEOjIM2D/onO/OFbwxIkbg.AvuQlFHsnkS","labels":[],"__v":0},{"_id":"65a64d3e2c83d59851bf4b91","name":"Niclas","email":"na@web.de","password":"$2b$10$BD.UImjJAAHWzfdFL5Zucu2bFO4.tHqtgpAiWjlHCIFxTQZ8Nc3q.","labels":[],"__v":0},{"_id":"65a64e542c83d59851bf4b97","name":"a","email":"qw@web.de","password":"$2b$10$WyOVU3LjteYyEChseXYx/e4rPN413m.EGd0RWbRW06BJsOHVnj.om","labels":[],"__v":0},{"_id":"65ad1e3cec904dad4c4f91ad","name":"hans","email":"peter@web.dee","password":"$2b$10$i67X1Rkp4VxEvZF/L5o9nuOk2ti.Lt8yQuX3BTZdoqcOw0wq6dwrO","labels":[],"__v":0},{"_id":"65ad1fb3ec904dad4c4f91b7","name":"a","email":"peter@web.deee","password":"$2b$10$XwPfWqoJO.ljLjTCwIxbc.RvijqrZ9Pw.NUuhYA1yZSi6ZNUyPwLm","labels":[],"__v":0},{"_id":"65c27dc9bafb031c43a3c03e","name":"w","email":"r@web.de","password":"$2b$10$VFsJA6SP6QhKi1H.q4x/AeXLe/PT9In2PwbuHMRIWHpv6xxXH6hc6","labels":[],"__v":0},{"_id":"65c27e46a6f397e12713253f","name":"q","email":"t@web.de","password":"$2b$10$eBJhofORhASncemEuZKvIOgExp6L8dXApo.ByqPvtDtTwsOKQtbOO","labels":[],"__v":0},{"_id":"65c28278a82f46a0e2144016","name":"q","email":"q","password":"$2b$10$sfzvNbDrXicOE1z.n/mRte/.2A89oyVilAtZyk19ks7uHTvuBFbiK","labels":[],"__v":0},{"_id":"65c28296a82f46a0e214401a","name":"wwwww","email":"hallo@web.de","password":"$2b$10$f3MbYBYMv6LagazOtAndyuaJM/EgFVmqs3WPctrN1w4xEE8GbYTFi","labels":[],"__v":0},{"_id":"65c892dd8a84a26fa3791855","name":"q","email":"versuch3@web.de","password":"$2b$10$pXotsPaH0U68gi.j4NzFmuebwPDdBMK57yRUdfQxX.qmbLd6Xa.jm","labels":[],"__v":0},{"_id":"65c8bd42143d34895803b616","name":"hallo4","email":"versuch4@web.de","password":"$2b$10$hvjGNSyKGpXpJy8FSItUp.ne8nzUWnTeMNR9JKVW7n6iJflaKa8rq","labels":["65c8bd50143d34895803b619"],"__v":0},{"_id":"65c8e41679f9ca55c7891c28","name":"a","email":"wq@web.de","password":"$2b$10$ctB60/.3riSiklQFEn8UVuXMdvgYaG0HGGKiHr43CAYmFPxtUSAmu","labels":["65c8e57258c0f4df3d8c739b","65c8e5c858c0f4df3d8c73ae","65c8e5f558c0f4df3d8c73ba","65c8e71358c0f4df3d8c73c6"],"__v":0},{"_id":"65cf6e50872689433a6ab501","name":"a","email":"aa@web.de","password":"$2b$10$q23WGA/2djFc3zCe/zHOWuS/Ipt3.6f0CP5NMyvhc4av2vB3InXEO","labels":["65cf6e5b872689433a6ab504"],"__v":0},{"_id":"65cf71f16f33c907c7315f63","name":"hund","email":"hund@web.de","password":"$2b$10$L3fWtwV15yAJ.ZpZLoUddOXCHW5NVQvOiBOFA.h8LFR7bPY.49f6S","labels":[],"__v":0},{"_id":"65cf95c3f55863ab6ba51ca9","name":"aaasadsad","email":"aaaqwa@web.de","password":"$2b$10$3Xr48AH/62AY36UK26OO9eXL.B8gRJjBSMaM26tm5OeG8ClKpqTea","labels":[],"__v":0},{"_id":"65cf95df78a11cabeab418ee","name":"v","email":"versuch10@web.de","password":"$2b$10$/pY84S89G0pVu5ZB8ji/8u8pLcQXbfl0E9VYXA7fDlWdDBcWTTvPC","labels":[],"__v":0},{"_id":"65cf96c298ae436ff00b21bd","name":"why","email":"versuch1why@web.de","password":"$2b$10$m0Et1BWjnIxnhZeeymPSiuFS2378jNUNB660cV.drkLMKIY2rH1qK","labels":[],"__v":0},{"_id":"65cf96f898ae436ff00b21c0","name":"wahrscheinlich","email":"wahr@web.de","password":"$2b$10$P9jhCzISsRLO2IYhEFUkouuBgLHFHFDcj4vXKuJ6EPhIJaxe3m2cu","labels":[],"__v":0},{"_id":"65cf976e17a7b38a16896d50","name":"holo","email":"holo@web.de","password":"$2b$10$m80PDg9csO37GdnR43v95eV4udLMC1hPFr.O0VPxlM2oSDMSDMrJy","labels":[],"__v":0},{"_id":"65cf97e0bc7d6fb6a5aab095","name":"hume","email":"hume@web.de","password":"$2b$10$RZ19GImO7FDe6iu5MEA5A.Wfm6Upzz0jxjERJxXw1.86v2Sqd.1AS","labels":[],"__v":0},{"_id":"65d1cfedb65e44a5fbb2f798","name":"Ryan Stecken","email":"ryan@web.de","password":"$2b$10$9OVhviQrElwN9Xvi.IqGBuMuYTxFR19IJpXZ4sZZ2xpVv4bfrEYri","labels":["65d1d00fb65e44a5fbb2f79d"],"__v":0},{"_id":"6612ae82bc5842cf7eb974fe","name":"Diet","email":"dd@web.de","password":"$2b$10$NIWSPtFYn1o4dF/WwrQkDOOsnv59sU0rvf4hbuYd.mEGouUsXWpiK","labels":["6612aebabc5842cf7eb97503"],"__v":0},{"_id":"6613cefaee7103b167bead7f","name":"ttt","email":"ttt@web.de","password":"$2b$10$s/VGqr19DLqN40VO8lFS4O2e4nffnsFvmnP6r8SKWh2XyMICNwaSK","labels":[],"__v":0},{"_id":"6613cf22ee7103b167bead84","name":"w","email":"der@web.de","password":"$2b$10$GEnD3LyY6zMUWVnwEYfR6eiTcDDItkazceKaqy3swZHuzgC/GKND.","labels":[],"__v":0},{"_id":"6613d2dcee7103b167bead8a","name":"test5","email":"test55@web.de","password":"$2b$10$sR29Y5b1cZFbn5ixRIVysulSuH4xQhCTx2RxhbZ1un8AD1OckF82e","labels":[],"__v":0},{"_id":"661cfd990487d75c4819d575","name":"Michael","email":"michael3@web.de","password":"$2b$10$0KdPFNmJ0GJfKKQI/bo4vuEwDL3U8PBKG4RUizW14AO/W/GjstuQi","labels":[],"__v":0},{"_id":"661d02000487d75c4819d57d","name":"Michael","email":"michael4@web.de","password":"$2b$10$GPWaXX4kJBu77nRMd5Zzk.khtX5sy8.BcruJTE3K4gHoW9sADyfam","labels":[],"__v":0},{"_id":"661d028faf703b2e1c88ab73","name":"Michael","email":"michael5@web.de","password":"$2b$10$.1oNsRT5nmb7hgxbGJpM7OAH2j3klDqZyd77O7MuyLVIFXG7L0Gwe","labels":[],"__v":0},{"_id":"661d0447cf75b01f14e089eb","name":"Michael","email":"michael6@web.de","password":"$2b$10$ICqlDLtE7rF1V1jxnGd4uuqHIIun9/ZLPtdeCR4VsYYpkhF3lcSVa","labels":[],"__v":0},{"_id":"661d05b11b6e4aa4d4f405ae","name":"Michael","email":"michael7@web.de","password":"$2b$10$jMVFLaGwaxvxqxO3dtkYROx7wA8IbGf62wyNg68gWRMHzSgB75ccG","labels":[],"__v":0},{"_id":"661d07528cf6ec03f5af6dd9","name":"Michael","email":"michael8@web.de","password":"$2b$10$NrfQR4zEDZ67FOvOHJ2c.er3Aope.kJkBJuwdbF9g/DvVRu.XUWfS","labels":[],"__v":0},{"_id":"661d07728cf6ec03f5af6de2","name":"Michael","email":"michael10@web.de","password":"$2b$10$97ORg1sVeE9aUefU38THZOEccELcZwgQ70E3Qr8vFQjRx5EZyic/e","labels":[],"__v":0},{"_id":"661d09c5d2d167feaf5800bc","name":"Michael","email":"michael11@web.de","password":"$2b$10$sQwNekeQnMGrI51tbvmYt.qOFeNLdn5UX3jQo64m5PNjjjPrPXpga","labels":[],"__v":0},{"_id":"661d1cfbd2d167feaf5800c7","name":"Michael","email":"michael13@web.de","password":"$2b$10$O6AmV6/SIruW0e6obhv2J.hyqLnwaQMrd0CxpXO0vCuI3vIGP5ZTK","labels":[],"__v":0},{"_id":"661d1d1ed2d167feaf5800d5","name":"Michael","email":"michael14@web.de","password":"$2b$10$aKDcYUdIS7DDu.g.4.vLGuICEoKF3CrJxY4B9upjivHEG2vlscpdu","labels":[],"__v":0},{"_id":"661e646446395fabea74f330","name":"Michael","email":"michael15@web.de","password":"$2b$10$QP6P2GSAXdqnU/fy91PX6u3hfOIaf4fDnQHdH1gNlWcYT1mP0kXYG","labels":[],"__v":0},{"_id":"661e651eed80cfb833d0d47e","name":"Michael","email":"michael16@web.de","password":"$2b$10$PFasrbdgE729i6.GkxlhDuBv9.4G3QJ8vYYqQWWKEfCB3vWXW67mi","labels":[],"__v":0},{"_id":"661e65bb2cd1c0f2d31aab58","name":"Michael","email":"michael17@web.de","password":"$2b$10$x.CD9tT8GqrojTXnObVIreOoHQq2hfLSp17G7PknFV9qeAxAhxrtO","labels":[],"__v":0},{"_id":"661e66f88d7193a4201e24ae","name":"Michael","email":"michael18@web.de","password":"$2b$10$CtUk831nT8u7aJT7eCnZEuCtlcAfuOV4xPm4SwtwEh4tPdavCXSXi","labels":[],"__v":0},{"_id":"661e68117deb6187b800fdfe","name":"Michael","email":"michael19@web.de","password":"$2b$10$b4BzvK6pWEFFMwSdwhqWGuj421LZat1Trfu7djxfIYmRftUSECcF6","labels":[],"__v":0},{"_id":"662123922f7c8e969c20bc1e","name":"poi","email":"poi@web.de","password":"$2b$10$AMduWbDgnl9Inn/PeNieQON8Tx8ReixJXHmIyyBH1jxxATXCZbrPq","labels":[],"__v":0},{"_id":"662125bd2f7c8e969c20bc25","name":"cd","email":"cd@web.de","password":"$2b$10$BZs7NMswvqe2BGwWpD6i7ODFQU1fq502EQNnKbdcc3/PWfWj1uhW.","labels":[],"__v":0},{"_id":"662138bcba286fb581390d90","name":"Michael","email":"michael20@web.de","password":"$2b$10$as5DoF/0p45TXl34i2n7H.gF.R9kaHYBn2R3gJgp8/iAr/8NGcTAm","labels":[],"__v":0},{"_id":"66214cf620618da6843f8e7a","name":"Michael","email":"michael21@web.de","password":"$2b$10$izfnDSyoRotAK9cvXTxdf.b3A.yGW/kZXyqZSgD2YimPzoK5OIjHy","labels":[],"__v":0}]</user>
+  </dataelements>
+  <endpoints>
+    <user>https-post://cpee.org/services/timeout-user.php</user>
+    <auto>https-post://cpee.org/services/timeout-auto.php</auto>
+    <subprocess>https-post://cpee.org/flow/start/url/</subprocess>
+    <timeout>https://cpee.org/services/timeout.php</timeout>
+    <send>https-post://cpee.org/ing/correlators/message/send/</send>
+    <receive>https-get://cpee.org/ing/correlators/message/receive/</receive>
+    <userInfo>https://lehre.bpm.in.tum.de/ports/6982/users/getInfoOfUser/65a11a44044477f879936096</userInfo>
+    <allUserInfo>https://lehre.bpm.in.tum.de/ports/6982/users/getInfoOfAllUsers</allUserInfo>
+    <allUserEmails>https://lehre.bpm.in.tum.de/ports/6982/users/getAllUserEmails</allUserEmails>
+    <userRegistration>https://lehre.bpm.in.tum.de/ports/6982/users/register-query?name=Michael&amp;email=michael30@web.de&amp;password=12345</userRegistration>
+    <userLogin>https://lehre.bpm.in.tum.de/ports/6982/users/login-query?email=michael7@web.de&amp;password=12345</userLogin>
+    <deleteUser>https://lehre.bpm.in.tum.de/ports/6982/users/deleteUser/65a0a16917f501448307c9d5</deleteUser>
+  </endpoints>
+  <attributes>
+    <info>Enter info here</info>
+    <modeltype>CPEE</modeltype>
+    <theme>extended</theme>
+  </attributes>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <call id="a4" endpoint="allUserInfo">
+        <parameters>
+          <label>Get attributes of specific user</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.user = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a5" endpoint="allUserInfo">
+        <parameters>
+          <label>Get attributes of all users</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.allUser = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a8" endpoint="allUserEmails">
+        <parameters>
+          <label>Get emails of all users</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.allUserEmails = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a9" endpoint="userRegistration">
+        <parameters>
+          <label>User registration</label>
+          <method>:post</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.newUser = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a10" endpoint="userLogin">
+        <parameters>
+          <label>User login</label>
+          <method>:post</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.newLogin = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a13" endpoint="deleteUser">
+        <parameters>
+          <label>Delete specific user</label>
+          <method>:delete</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.deletedUser = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <stop id="a2"/>
+    </description>
+  </description>
+  <transformation>
+    <description type="copy"/>
+    <dataelements type="none"/>
+    <endpoints type="none"/>
+  </transformation>
+</testset>

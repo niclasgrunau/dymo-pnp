@@ -1,0 +1,304 @@
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <allLabelsOfUser>[{"_id":"65ad315059baf730b299befe","user":"65c8e41679f9ca55c7891c28","name":"alt","text":"","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-21T14:59:28.858Z","__v":0},{"_id":"65ad315459baf730b299bf03","user":"65a11a44044477f879936096","name":"mittel","text":"","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-21T14:59:32.720Z","__v":0},{"_id":"65ad315659baf730b299bf08","user":"65a11a44044477f879936096","name":"neu","text":"","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-21T14:59:34.689Z","__v":0},{"_id":"65ad32f759baf730b299bf11","user":"65a11a44044477f879936096","name":"neueste","text":"","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-21T15:06:31.977Z","__v":0},{"_id":"65ae75f6507a59da35955295","user":"65a11a44044477f879936096","name":"allerneueste","text":"gggg","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-22T14:04:38.044Z","__v":0},{"_id":"65c880137e80b942d70cb655","user":"65a11a44044477f879936096","name":"sss","text":"sss","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T08:06:43.006Z","__v":0},{"_id":"65c8e58058c0f4df3d8c73a1","user":"65a11a44044477f879936096","name":"qq","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T15:19:28.591Z","__v":0},{"_id":"65c8e5e258c0f4df3d8c73b4","user":"65a11a44044477f879936096","name":"peters label","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T15:21:06.633Z","__v":0},{"_id":"65c8e70158c0f4df3d8c73c0","user":"65a11a44044477f879936096","name":"a","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T15:25:53.359Z","__v":0},{"_id":"65c8e79d58c0f4df3d8c73d0","user":"65a11a44044477f879936096","name":"o","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T15:28:29.481Z","__v":0},{"_id":"65c8e8e958c0f4df3d8c73d8","user":"65a11a44044477f879936096","name":"aaa","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-11T15:34:01.037Z","__v":0},{"_id":"65cf6e42872689433a6ab4fd","user":"65a11a44044477f879936096","name":"a","text":"","fontStyle":"Arial","fontSize":30,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-02-16T14:16:34.888Z","__v":0}]</allLabelsOfUser>
+    <att12>{"message":"Label user updated successfully","newUserId":"65c8e41679f9ca55c7891c28"}</att12>
+    <deletedLabel>{"message":"Label deleted successfully"}</deletedLabel>
+    <labelAttributes>{"_id":"65ad315059baf730b299befe","user":"65c8e41679f9ca55c7891c28","name":"alt","text":"","fontStyle":"Helvetica","fontSize":12,"isBold":false,"isItalic":false,"isUnderline":false,"textAlignment":"center","verticalAlignment":"middle","isQRCodeUsed":false,"url":"","shortenedUrl":"","createdAt":"2024-01-21T14:59:28.858Z","__v":0}</labelAttributes>
+    <labelsWithUrl>[{"id":"6612aebabc5842cf7eb97503","userId":"6612ae82bc5842cf7eb974fe","createdAt":"2024-04-07T14:33:30.460Z"}]</labelsWithUrl>
+    <savedLabelAttributes>{"message":"Label saved successfully"}</savedLabelAttributes>
+  </dataelements>
+  <endpoints>
+    <user>https-post://cpee.org/services/timeout-user.php</user>
+    <auto>https-post://cpee.org/services/timeout-auto.php</auto>
+    <subprocess>https-post://cpee.org/flow/start/url/</subprocess>
+    <timeout>https://cpee.org/services/timeout.php</timeout>
+    <send>https-post://cpee.org/ing/correlators/message/send/</send>
+    <receive>https-get://cpee.org/ing/correlators/message/receive/</receive>
+    <labelsOfUser>https://lehre.bpm.in.tum.de/ports/6982/labels/allLabelsOfUser/65a11a44044477f879936096</labelsOfUser>
+    <saveLabel>https://lehre.bpm.in.tum.de/ports/6982/labels/save-query?userId=65c891098a84a26fa379184f&amp;name=MyLabel&amp;text=Hello&amp;fontStyle=Arial&amp;fontSize=12&amp;isBold=false&amp;isItalic=false&amp;isUnderline=false&amp;textAlignment=center&amp;verticalAlignment=middle&amp;isQRCodeUsed=false&amp;url=&amp;shortenedUrl=&amp;createdAt=2022-04-13T10:00:00</saveLabel>
+    <deleteLabel>https://lehre.bpm.in.tum.de/ports/6982/labels/deleteLabel/65cf8f83caca5a2a4504c0a6</deleteLabel>
+    <labelAttributes>https://lehre.bpm.in.tum.de/ports/6982/labels/getInfoOfLabel/65ad315059baf730b299befe</labelAttributes>
+    <labelsWithUrl>https://lehre.bpm.in.tum.de/ports/6982/labels/labelWithUrl/google.de</labelsWithUrl>
+    <updateLabelUser>https://lehre.bpm.in.tum.de/ports/6982/labels/updateUserOfLabel/65ad315059baf730b299befe/65c8e41679f9ca55c7891c28</updateLabelUser>
+  </endpoints>
+  <attributes>
+    <info>Enter info here</info>
+    <modeltype>CPEE</modeltype>
+    <theme>extended</theme>
+  </attributes>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <call id="a1" endpoint="labelsOfUser">
+        <parameters>
+          <label>All labels of specific user</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.allLabelsOfUser = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a6" endpoint="saveLabel">
+        <parameters>
+          <label>Save label for a user</label>
+          <method>:post</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.savedLabel = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a7" endpoint="deleteLabel">
+        <parameters>
+          <label>Delete label of a user</label>
+          <method>:delete</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.deletedLabel = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a11" endpoint="labelAttributes">
+        <parameters>
+          <label>Get attributes of label</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.labelAttributes = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a12" endpoint="labelsWithUrl">
+        <parameters>
+          <label>Get all labels with an url</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.labelsWithUrl = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a14" endpoint="updateLabelUser">
+        <parameters>
+          <label>Update user of a label</label>
+          <method>:put</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.att12 = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <stop id="a2"/>
+    </description>
+  </description>
+  <transformation>
+    <description type="copy"/>
+    <dataelements type="none"/>
+    <endpoints type="none"/>
+  </transformation>
+</testset>

@@ -1,0 +1,166 @@
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <att14>{ "CUPS command line for printing": "curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/PDFQRCode.pdf" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x24 -o fit-to-page" }</att14>
+    <att15>{ "CUPS command line for printing": "curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloads/PDFTextAndQRCode.pdf" | lp -d DYMO_LabelManager_PnP -o landscape -o PageSize=Custom.24x181 -o fit-to-page" }</att15>
+    <printCommandforPDFWithText>{ "CUPS command line for printing": "curl -s "https://lehre.bpm.in.tum.de/~ge83neb/dymo-pnp/backend/downloa" }</printCommandforPDFWithText>
+  </dataelements>
+  <endpoints>
+    <user>https-post://cpee.org/services/timeout-user.php</user>
+    <auto>https-post://cpee.org/services/timeout-auto.php</auto>
+    <subprocess>https-post://cpee.org/flow/start/url/</subprocess>
+    <timeout>https://cpee.org/services/timeout.php</timeout>
+    <send>https-post://cpee.org/ing/correlators/message/send/</send>
+    <receive>https-get://cpee.org/ing/correlators/message/receive/</receive>
+    <createTextLabel>https://lehre.bpm.in.tum.de/ports/6982/image/createPDFWithText/Hallo-test-cool</createTextLabel>
+    <createQRCodeLabel>https://lehre.bpm.in.tum.de/ports/6982/image/createPDFWithQRCode/google.de</createQRCodeLabel>
+    <createTextQRCodeLabel>https://lehre.bpm.in.tum.de/ports/6982/image/createPDFWithTextAndQRCode-query?text=hallo-test-cool&amp;url=google.de</createTextQRCodeLabel>
+  </endpoints>
+  <attributes>
+    <info>Enter info here</info>
+    <modeltype>CPEE</modeltype>
+    <theme>extended</theme>
+  </attributes>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <call id="a15" endpoint="createTextLabel">
+        <parameters>
+          <label>Create a PDF label with a specified text</label>
+          <method>:post</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.printCommandforPDFWithText = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a16" endpoint="createQRCodeLabel">
+        <parameters>
+          <label>Create a PDF label with a specified QR Code</label>
+          <method>:post</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.printCommandforPDFWithQRCode = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a17" endpoint="createTextQRCodeLabel">
+        <parameters>
+          <label>Create a PDF label with a specified text and QR Code</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.printCommandforPDFWithTextAndQRCode = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_generic/>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <stop id="a2"/>
+    </description>
+  </description>
+  <transformation>
+    <description type="copy"/>
+    <dataelements type="none"/>
+    <endpoints type="none"/>
+  </transformation>
+</testset>
